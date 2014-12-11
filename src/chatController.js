@@ -8,7 +8,7 @@ var socket = function(io) {
     })
 
     socket.on('chat message', function(msg){
-      console.log('message: ' + msg);
+      io.emit('chat message', msg)
     });
 
   });
