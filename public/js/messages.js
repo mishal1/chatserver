@@ -3,6 +3,7 @@ var socket = io.connect('/');
 // user enters a message
 $('form').submit(function(){
   socket.emit('chat message', $('#m').val());
+  $('#messages').append($('<li>').text($('#m').val()));
   $('#m').val('');
   return false;
 });
