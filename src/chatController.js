@@ -13,6 +13,10 @@ var socket = function(io) {
       socket.broadcast.emit('chat message', msg)
     });
 
+    socket.on('username', function(username){
+      console.log(username)
+    });
+
   });
 }
 
