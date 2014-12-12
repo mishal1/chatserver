@@ -14,4 +14,8 @@ app.get('/', function(request, response){
   response.sendFile(__dirname + '/index.html');
 });
 
+app.set('port', process.env.PORT || 3000)
+
+listen(app.get('port')
+
 module.exports = server;
