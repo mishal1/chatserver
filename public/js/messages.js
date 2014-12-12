@@ -9,6 +9,10 @@ $('#usermessage').submit(function(){
   return false;
 });
 
+$('#m').keypress(function(){
+  $('#usertyping').text(username + " is typing really slowly");
+});
+
 // user receives a broadcast message
 socket.on('chat message', function(msg){
   $('#messages').append($('<li>').text(msg));

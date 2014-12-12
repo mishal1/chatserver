@@ -16,6 +16,11 @@ form#login {
   width: 100%; 
 }
 
+#usertyping {
+  position:fixed;
+  bottom: 50px;
+}
+
 form#login input { 
   border: 0; 
   padding: 10px; 
