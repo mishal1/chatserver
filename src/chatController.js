@@ -1,7 +1,5 @@
 var socket = function(io) {
   io.on('connection', function(socket){
-    
-    socket.broadcast.emit('login', 'User connects')
 
     socket.on('disconnect', function(){
       console.log('user disconnected')
@@ -15,6 +13,7 @@ var socket = function(io) {
 
     socket.on('username', function(username){
       socket.username = username;
+      socket.broadcast.emit('login', username + ' is in the HOUSE!')
     });
 
   });
