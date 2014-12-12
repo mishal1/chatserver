@@ -14,10 +14,10 @@ app.get('/', function(request, response){
   response.sendFile(__dirname + '/index.html');
 });
 
-var port = process.env.PORT || 3000)
+var port = process.env.PORT || 3000
 
 server.listen(port, function(){
   console.log("Listening on port " + port)
-})
+});
 
 module.exports = server;
