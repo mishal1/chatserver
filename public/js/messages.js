@@ -2,8 +2,9 @@ var socket = io.connect('/');
 
 // user enters a message
 $('#usermessage').submit(function(){
-  socket.emit('chat message', $('#m').val());
-  $('#messages').append($('<li>').text($('#m').val()));
+  var username = socket.username;
+  socket.emit('chat message', username + ": " + $('#m').val());
+  $('#messages').append($('<li>').text(username + ": " + $('#m').val()));
   $('#m').val('');
   return false;
 });
@@ -19,6 +20,7 @@ socket.on('login', function(login_notification){
 
 $('#login').submit(function(event){
   event.preventDefault()
+  socket.username = $('#username').val();
   socket.emit('username', $('#username').val());
   $('#login').slideUp(function(){
     $('#loginpage').remove();

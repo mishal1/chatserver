@@ -14,7 +14,7 @@ var socket = function(io) {
     });
 
     socket.on('username', function(username){
-      console.log(username)
+      socket.username = username;
     });
 
   });
