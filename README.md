@@ -14,7 +14,7 @@ This repo was created by following the tutorial presented on the
 
 ###Images
 
-![alt text](images/chatserver 
+![alt text](/images/chatserver 
 "Chat Server")
 
 ###Improvements
