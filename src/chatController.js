@@ -5,11 +5,12 @@ var socket = function(io) {
       console.log('user disconnected')
     })
 
-    // server receives a message and then broadcasts that message out
 
+    // server receives a message and then broadcasts that message out
     socket.on('chat message', function(msg){
       socket.broadcast.emit('chat message', msg)
     });
+
 
     socket.on('username', function(username){
       socket.username = username;
