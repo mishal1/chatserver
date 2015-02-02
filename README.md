@@ -1,5 +1,7 @@
 #Web Sockets Introduction
 
+[![Code Climate](https://codeclimate.com/github/nickbdyer/websocketsintro/badges/gpa.svg)](https://codeclimate.com/github/nickbdyer/websocketsintro)
+
 Week 7 at Makers Academy
 
 ###Technology
